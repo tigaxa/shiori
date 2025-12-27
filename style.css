@@ -323,6 +323,10 @@ ol li::marker {
   font-weight: 700;
 }
 
+.sama {
+  font-size: 0.66em;
+}
+
 footer {
   margin-top: 44px;
   text-align: center;
