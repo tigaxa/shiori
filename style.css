@@ -85,7 +85,7 @@ h1::after {
   position: relative;
   text-align: center;
   margin: 0 auto 34px;
-  padding: 14px 18px;
+  padding: 18px 18px 20px;
   max-width: 540px;
   background: linear-gradient(135deg, rgba(79, 107, 58, 0.08), rgba(212, 139, 163, 0.12));
   border: 1px solid rgba(179, 138, 41, 0.3);
@@ -101,12 +101,65 @@ h1::after {
   pointer-events: none;
 }
 
-.meta strong {
-  display: block;
+.meta-main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
   font-size: 17px;
   letter-spacing: 0.08em;
   color: var(--green);
-  margin-bottom: 4px;
+  margin-bottom: 14px;
+}
+
+.meta-date {
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(179, 138, 41, 0.12);
+  border: 1px solid rgba(179, 138, 41, 0.32);
+}
+
+.meta-venue {
+  padding: 6px 10px 4px;
+}
+
+.meta-names {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.name-column {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.family-title {
+  align-self: flex-start;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(79, 107, 58, 0.14);
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(79, 107, 58, 0.18);
+}
+
+.name-row {
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(179, 138, 41, 0.28);
+  box-shadow: 0 3px 9px rgba(30, 44, 27, 0.08);
+  letter-spacing: 0.02em;
 }
 
 .section {
@@ -206,5 +259,13 @@ footer::before {
 
   .meta {
     padding: 12px 14px;
+  }
+
+  .meta-names {
+    gap: 12px;
+  }
+
+  .name-column {
+    flex: 1 1 180px;
   }
 }
