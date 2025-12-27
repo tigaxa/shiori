@@ -234,6 +234,17 @@ body.profile-page {
   line-height: 1.7;
 }
 
+.profile-section {
+  margin-top: 10px;
+}
+
+.profile-section-title {
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.08em;
+  margin-bottom: 4px;
+}
+
 .section {
   position: relative;
   margin-bottom: 30px;
