@@ -1,0 +1,210 @@
+:root {
+  --paper: #fffaf3;
+  --ink: #1e2c1b;
+  --green: #4f6b3a;
+  --pink: #d48ba3;
+  --gold: #b38a29;
+  --shadow: 0 24px 48px rgba(30, 44, 27, 0.14);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 36px 18px 56px;
+  background-color: #f5efe1;
+  background-image:
+    radial-gradient(1200px 1200px at 18% 4%, rgba(212, 139, 163, 0.13), transparent 60%),
+    radial-gradient(1200px 1200px at 82% 12%, rgba(79, 107, 58, 0.12), transparent 64%),
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.025), rgba(0, 0, 0, 0.025) 1px, transparent 1px, transparent 14px),
+    repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02) 1px, transparent 1px, transparent 18px);
+  color: var(--ink);
+  font-family: "Hiragino Mincho ProN", "Yu Mincho", "游明朝", serif;
+  line-height: 1.8;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 780px;
+  padding: 34px 32px 52px;
+  background: var(--paper);
+  border: 1px solid rgba(179, 138, 41, 0.28);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(179, 138, 41, 0.32);
+  pointer-events: none;
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(179, 138, 41, 0.16), transparent 26%),
+    linear-gradient(315deg, rgba(212, 139, 163, 0.14), transparent 28%),
+    linear-gradient(45deg, rgba(79, 107, 58, 0.08), transparent 24%);
+  opacity: 0.32;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+h1 {
+  margin: 0 0 18px;
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 0.16em;
+  color: var(--ink);
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 2px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.meta {
+  position: relative;
+  text-align: center;
+  margin: 0 auto 34px;
+  padding: 14px 18px;
+  max-width: 540px;
+  background: linear-gradient(135deg, rgba(79, 107, 58, 0.08), rgba(212, 139, 163, 0.12));
+  border: 1px solid rgba(179, 138, 41, 0.3);
+  border-radius: 12px;
+}
+
+.meta::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border-radius: 9px;
+  border: 1px dashed rgba(179, 138, 41, 0.35);
+  pointer-events: none;
+}
+
+.meta strong {
+  display: block;
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  color: var(--green);
+  margin-bottom: 4px;
+}
+
+.section {
+  position: relative;
+  margin-bottom: 30px;
+  padding: 14px 16px 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.88);
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(212, 139, 163, 0.06), rgba(79, 107, 58, 0.05));
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.section p {
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--green);
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 139, 163, 0.35), rgba(79, 107, 58, 0.24));
+}
+
+ol {
+  margin: 0;
+  padding-left: 26px;
+  line-height: 1.9;
+  position: relative;
+  z-index: 1;
+}
+
+ol li {
+  padding-left: 4px;
+  margin-bottom: 6px;
+}
+
+ol li::marker {
+  color: var(--green);
+  font-weight: 700;
+}
+
+footer {
+  margin-top: 44px;
+  text-align: center;
+  font-size: 14px;
+  color: #3a472d;
+  letter-spacing: 0.06em;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  width: 120px;
+  height: 1px;
+  margin: 0 auto 14px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 22px 14px 38px;
+  }
+
+  .container {
+    padding: 26px 22px 40px;
+  }
+
+  h1 {
+    font-size: 22px;
+    letter-spacing: 0.12em;
+  }
+
+  .meta {
+    padding: 12px 14px;
+  }
+}
