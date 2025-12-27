@@ -308,6 +308,21 @@ ol li::marker {
   font-weight: 700;
 }
 
+.no-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.no-list li {
+  margin-bottom: 6px;
+}
+
+.kansuji {
+  color: var(--green);
+  font-weight: 700;
+}
+
 footer {
   margin-top: 44px;
   text-align: center;
