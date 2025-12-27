@@ -155,12 +155,83 @@ h1::after {
 }
 
 .name-row {
-  padding: 6px 10px;
+  padding: 0;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(179, 138, 41, 0.28);
   box-shadow: 0 3px 9px rgba(30, 44, 27, 0.08);
   letter-spacing: 0.02em;
+  overflow: hidden;
+}
+
+.name-row a {
+  display: block;
+  padding: 7px 10px 7px;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.name-row a:focus-visible,
+.name-row a:hover {
+  background: rgba(212, 139, 163, 0.14);
+}
+
+body.profile-page {
+  padding: 32px 18px 48px;
+}
+
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.back-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px 5px;
+  border-radius: 999px;
+  border: 1px solid rgba(79, 107, 58, 0.3);
+  background: rgba(79, 107, 58, 0.08);
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  background: rgba(212, 139, 163, 0.12);
+}
+
+.profile-card {
+  padding: 14px 14px 16px;
+  border-radius: 12px;
+  background: linear-gradient(145deg, rgba(79, 107, 58, 0.06), rgba(212, 139, 163, 0.1));
+  border: 1px solid rgba(179, 138, 41, 0.28);
+  box-shadow: 0 12px 28px rgba(30, 44, 27, 0.12);
+}
+
+.profile-name {
+  margin: 0 0 6px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--green);
+  font-size: 20px;
+}
+
+.profile-role {
+  font-size: 14px;
+  color: #3a472d;
+  margin-bottom: 10px;
+  letter-spacing: 0.04em;
+}
+
+.profile-body {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 .section {
