@@ -534,3 +534,53 @@ h1 {
   background: linear-gradient(to right, #fff, #fffaf3);
   border: 1px solid var(--gold) !important;
 }
+
+/* --- index.html 用の追加スタイル --- */
+.info-table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+.info-table th, .info-table td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(179, 138, 41, 0.2);
+  text-align: left;
+}
+.info-table th {
+  width: 30%;
+  color: var(--gold);
+  font-weight: 700;
+  white-space: nowrap;
+}
+.map-group {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.map-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: rgba(79, 107, 58, 0.05);
+  border: 1px solid rgba(79, 107, 58, 0.2);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--ink);
+  font-size: 14px;
+  transition: background 0.2s;
+}
+.map-link:hover {
+  background: rgba(212, 139, 163, 0.1);
+}
+.map-icon {
+  font-size: 1.2em;
+}
+.station-name {
+  font-weight: 700;
+  color: var(--green);
+  display: block;
+  margin-bottom: 2px;
+}
