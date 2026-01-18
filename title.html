@@ -6,14 +6,108 @@
   <meta name="robots" content="noindex,nofollow" />
   <title>ご縁を結ぶ食事会のご案内</title>
   <link rel="stylesheet" href="./style.css" />
+  <style>
+    /* 追加の調整用スタイル */
+    .info-table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+    .info-table th, .info-table td {
+      padding: 12px;
+      border-bottom: 1px solid rgba(179, 138, 41, 0.2);
+      text-align: left;
+    }
+    .info-table th {
+      width: 30%;
+      color: var(--gold);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .map-group {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .map-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: rgba(79, 107, 58, 0.05);
+      border: 1px solid rgba(79, 107, 58, 0.2);
+      border-radius: 8px;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .map-link:hover {
+      background: rgba(212, 139, 163, 0.1);
+    }
+    .map-icon {
+      font-size: 1.2em;
+    }
+    .station-name {
+      font-weight: 700;
+      color: var(--green);
+      display: block;
+      margin-bottom: 2px;
+    }
+  </style>
 </head>
 <body>
   <div class="container">
+    <div class="decoration-flower"></div>
     <h1>ご縁を結ぶ食事会のご案内</h1>
 
-    <div class="section title-page">
+    <div class="section">
+      <table class="info-table">
+        <tr>
+          <th>日時</th>
+          <td>2026年2月21日<br>12:00 開始</td>
+        </tr>
+        <tr>
+          <th>会場</th>
+          <td>
+            <strong>駒形前川 浅草本店</strong><br>
+            <span style="font-size: 0.9em; color: #666;">東京都台東区駒形2-1-29</span>
+          </td>
+        </tr>
+        <tr>
+          <th>集合場所</th>
+          <td>
+            <div class="map-group">
+              <a href="https://maps.app.goo.gl/3A6r9p2S2ZfRpxXQ8" target="_blank" class="map-link">
+                <span class="map-icon">📍</span>
+                <span>
+                  <span class="station-name">都営浅草線 A2a出口</span>
+                  Googleマップを確認する
+                </span>
+              </a>
+              <a href="https://maps.app.goo.gl/yLzL8uY6M3Wp3QvT8" target="_blank" class="map-link">
+                <span class="map-icon">📍</span>
+                <span>
+                  <span class="station-name">東武スカイツリーライン 正面口</span>
+                  Googleマップを確認する
+                </span>
+              </a>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="section title-page" style="margin-top: 30px;">
+      <p class="title-lead">当日のプログラムやプロフィールはこちら</p>
       <a class="title-action" href="./index.html">しおりを確認する</a>
     </div>
+
+    <footer>
+      当日はお気をつけてお越しください
+    </footer>
   </div>
 </body>
 </html>
